@@ -8,10 +8,8 @@ class GearmanPhpExtension <Formula
   depends_on 'libevent'
   depends_on 'gearman'
   depends_on 'autoconf'
-  aka 'gearman-ext'
 
   def install
-    # system "cp -R . ass"
     system "mv gearman-0.7.0/* ./"
     system "phpize"
     system "./configure", "--prefix=#{prefix}"
